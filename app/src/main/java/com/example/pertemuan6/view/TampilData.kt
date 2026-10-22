@@ -24,3 +24,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.pertemuan6.R
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun TampilData(
+    onBackBtnClick: () -> Unit
+){
+
+}
