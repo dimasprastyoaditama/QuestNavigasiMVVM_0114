@@ -29,24 +29,27 @@ import com.example.pertemuan6.R
 @Composable
 fun TampilData(
     onBackBtnClick: () -> Unit
-){
+) {
     val item = listOf(
         Pair(stringResource(id = R.string.nama_lengkap), "Contoh Nama"),
         Pair(stringResource(id = R.string.jenis_kelamin), "Lainnya"),
         Pair(stringResource(id = R.string.alamat), "Yogyakarta")
     )
-    Scaffold(modifier = Modifier,
+    Scaffold(
+        modifier = Modifier,
         topBar = {
             TopAppBar(
-                title = { Text(text = stringResource(id=R.string.tampil), color = Color.White) },
+                title = { Text(text = stringResource(id = R.string.tampil), color = Color.White) },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(containerColor = colorResource(id = R.color.teal_700))
             )
         }
     ) { isiRuang ->
-        Column(modifier = Modifier
-            .padding(paddingValues = isiRuang)
-            .fillMaxSize(),
-            verticalArrangement = Arrangement.SpaceBetween) {
+        Column(
+            modifier = Modifier
+                .padding(paddingValues = isiRuang)
+                .fillMaxSize(),
+            verticalArrangement = Arrangement.SpaceBetween
+        ) {
             Column(
                 modifier = Modifier.padding(all = dimensionResource(id = R.dimen.padding_small)),
                 verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_small))
@@ -64,5 +67,15 @@ fun TampilData(
                     HorizontalDivider(thickness = 1.dp, color = Color.Cyan)
                 }
             }
-        }}
+            Spacer(modifier = Modifier.height(10.dp))
+            Button(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(all = dimensionResource(id = R.dimen.padding_small)),
+                onClick = onBackBtnClick
+            ) {
+                Text(text = stringResource(id = R.string.back))
+            }
+        }
+    }
 }
