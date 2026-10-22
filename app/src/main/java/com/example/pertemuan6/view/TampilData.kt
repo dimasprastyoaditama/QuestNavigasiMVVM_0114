@@ -43,5 +43,10 @@ fun TampilData(
             )
         }
     ) { isiRuang ->
+        Column(modifier = Modifier
+            .padding(paddingValues = isiRuang)
+            .fillMaxSize(),
+            verticalArrangement = Arrangement.SpaceBetween) {
+        }
     }
 }
