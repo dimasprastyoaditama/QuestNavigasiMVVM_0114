@@ -28,3 +28,14 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import com.example.pertemuan6.R
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun FormIsian(
+    jenisK: List<String> = listOf("Laki-laki", "Perempuan"),
+    onSubmitBtnClick: (String, String, String) -> Unit
+) {
+    var nama by remember { mutableStateOf("") }
+    var selectJk by remember { mutableStateOf("") }
+    var alamat by remember { mutableStateOf("") }
+}
